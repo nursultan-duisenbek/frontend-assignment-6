@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 4 — Animations</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">jQuery<span>Lab</span></a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="part1-selectors.html">1. Selectors</a>
+        <a href="part2-effects.html">2. Effects</a>
+        <a href="part3-dom.html">3. DOM</a>
+        <a href="part4-animations.html" class="active">4. Animations</a>
+        <a href="part5-project.html">5. Mini Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <h1>Part 4. Animations</h1>
+      <p>Custom animations with <code>.animate()</code>.</p>
+    </header>
+
+    <div class="task-nav">
+      <a href="#task8">Task 8. Basic</a>
+      <a href="#task9">Task 9. Sequential</a>
+      <a href="#task10">Task 10. Combined</a>
+    </div>
+
+    <!-- ========== Task 8 ========== -->
+    <section class="task" id="task8">
+      <span class="task-label">Task 8</span>
+      <h2>Basic Animation</h2>
+      <p class="desc">The square grows (width, height) and moves (left, top) with <code>.animate()</code>.</p>
+
+      <div class="btn-group">
+        <button class="btn" id="btn-animate8">Animate</button>
+        <button class="btn secondary" id="btn-reset8">Reset</button>
+      </div>
+      <div class="stage" id="stage8">
+        <div class="box" id="box8"></div>
+      </div>
+    </section>
+
+    <!-- ========== Task 9 ========== -->
+    <section class="task" id="task9">
+      <span class="task-label">Task 9</span>
+      <h2>Sequential Animations</h2>
+      <p class="desc">Step by step: move right → move down → shrink → return to the original state.
+        jQuery puts chained <code>.animate()</code> calls in a queue, so they run one after another.</p>
+
+      <div class="btn-group">
+        <button class="btn" id="btn-animate9">Start</button>
+        <button class="btn danger" id="btn-stop9">Stop</button>
+      </div>
+      <p>Current step: <span class="step" id="step9">waiting</span></p>
+      <div class="stage" id="stage9">
+        <div class="box" id="box9"></div>
+      </div>
+    </section>
+
+    <!-- ========== Task 10 ========== -->
+    <section class="task" id="task10">
+      <span class="task-label">Task 10</span>
+      <h2>Combined Animation</h2>
+      <p class="desc">Opacity, size and movement change together in <b>one</b> <code>.animate()</code> call.</p>
+
+      <div class="btn-group">
+        <button class="btn" id="btn-animate10">Animate</button>
+        <button class="btn secondary" id="btn-reset10">Reset</button>
+        <label class="row">Easing:
+          <select id="easing10">
+            <option value="swing">swing (default)</option>
+            <option value="linear">linear</option>
+          </select>
+        </label>
+      </div>
+      <div class="stage" id="stage10">
+        <div class="box" id="box10"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Assignment #6 — jQuery &middot; <span class="student-name"></span>, <span class="student-group"></span>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/part4.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 6 — jQuery | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">jQuery<span>Lab</span></a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="part1-selectors.html">1. Selectors</a>
+        <a href="part2-effects.html">2. Effects</a>
+        <a href="part3-dom.html">3. DOM</a>
+        <a href="part4-animations.html">4. Animations</a>
+        <a href="part5-project.html">5. Mini Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Assignment #6. jQuery</h1>
+      <p>Selectors, effects, DOM manipulation and animations with the jQuery library.</p>
+    </section>
+
+    <section class="task">
+      <span class="task-label">Status</span>
+      <h2>Is jQuery loaded?</h2>
+      <p id="jq-status" class="status err">jQuery is NOT loaded (check the CDN link).</p>
+      <p class="hint">Open DevTools → Console (F12) to see the message <code>jQuery is ready!</code></p>
+    </section>
+
+    <h2>Parts of the assignment</h2>
+    <div class="cards">
+      <a class="card-link" href="part1-selectors.html">
+        <h3>Part 1. Getting Started</h3>
+        <p>Task 0: setup from CDN, <code>$(document).ready()</code>. Task 1: selectors, <code>.text()</code>, <code>.html()</code>, <code>.css()</code>.</p>
+      </a>
+      <a class="card-link" href="part2-effects.html">
+        <h3>Part 2. Effects</h3>
+        <p>Tasks 2–4: hide/show/toggle, fadeIn/fadeOut/fadeToggle, slideUp/slideDown/slideToggle.</p>
+      </a>
+      <a class="card-link" href="part3-dom.html">
+        <h3>Part 3. DOM Manipulation</h3>
+        <p>Tasks 5–7: append/prepend/remove, changing <code>src</code> and <code>href</code>, live form input.</p>
+      </a>
+      <a class="card-link" href="part4-animations.html">
+        <h3>Part 4. Animations</h3>
+        <p>Tasks 8–10: basic, sequential and combined <code>.animate()</code>.</p>
+      </a>
+      <a class="card-link" href="part5-project.html">
+        <h3>Part 5. Mini Project</h3>
+        <p>Task 11: image gallery — thumbnails fade in/out and enlarge on click.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Assignment #6 — jQuery &middot; <span class="student-name"></span>, <span class="student-group"></span>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#jq-status")
+        .text("jQuery is ready! Version " + $.fn.jquery)
+        .removeClass("err")
+        .addClass("ok");
+    });
+  </script>
+</body>
+</html>

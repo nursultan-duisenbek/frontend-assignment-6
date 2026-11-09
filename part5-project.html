@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 5 — Mini Project: Image Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">jQuery<span>Lab</span></a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="part1-selectors.html">1. Selectors</a>
+        <a href="part2-effects.html">2. Effects</a>
+        <a href="part3-dom.html">3. DOM</a>
+        <a href="part4-animations.html">4. Animations</a>
+        <a href="part5-project.html" class="active">5. Mini Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <h1>Part 5. Mini Project — Image Gallery</h1>
+      <p>Task 11: thumbnails fade in/out and enlarge on click.</p>
+    </header>
+
+    <section class="task" id="task11">
+      <span class="task-label">Task 11</span>
+      <h2>Interactive Image Gallery</h2>
+      <p class="desc">
+        Thumbnails <b>fade in</b> one by one when the page loads. The filter buttons <b>fade out</b> other
+        images and <b>fade in</b> the selected category. Click a picture to <b>enlarge</b> it.
+        In the big view use the arrows (or ← → keys) and close it with × or Esc.
+      </p>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="space">Space</button>
+      </div>
+
+      <div class="gallery">
+        <figure class="thumb" data-category="nature">
+          <img src="images/gallery/mountains.svg" alt="Mountains">
+          <figcaption>Mountains</figcaption>
+        </figure>
+        <figure class="thumb" data-category="nature">
+          <img src="images/gallery/lake.svg" alt="Sunset over the lake">
+          <figcaption>Sunset over the lake</figcaption>
+        </figure>
+        <figure class="thumb" data-category="city">
+          <img src="images/gallery/city-day.svg" alt="City at day">
+          <figcaption>City at day</figcaption>
+        </figure>
+        <figure class="thumb" data-category="city">
+          <img src="images/gallery/city-night.svg" alt="City at night">
+          <figcaption>City at night</figcaption>
+        </figure>
+        <figure class="thumb" data-category="space">
+          <img src="images/gallery/planet.svg" alt="Planet with a ring">
+          <figcaption>Planet with a ring</figcaption>
+        </figure>
+        <figure class="thumb" data-category="space">
+          <img src="images/gallery/galaxy.svg" alt="Galaxy">
+          <figcaption>Galaxy</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Big view (lightbox). Hidden by default, opened with jQuery -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-btn lb-close" id="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+    <img id="lb-img" src="" alt="">
+    <p id="lb-caption"></p>
+    <button class="lb-btn lb-next" id="lb-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <footer class="footer">
+    Assignment #6 — jQuery &middot; <span class="student-name"></span>, <span class="student-group"></span>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/part5.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 1 — Selectors &amp; CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">jQuery<span>Lab</span></a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="part1-selectors.html" class="active">1. Selectors</a>
+        <a href="part2-effects.html">2. Effects</a>
+        <a href="part3-dom.html">3. DOM</a>
+        <a href="part4-animations.html">4. Animations</a>
+        <a href="part5-project.html">5. Mini Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <h1>Part 1. Getting Started with jQuery</h1>
+      <p>Setup, selectors and changing content and styles.</p>
+    </header>
+
+    <div class="task-nav">
+      <a href="#task0">Task 0. Setup</a>
+      <a href="#task1">Task 1. Selectors &amp; CSS</a>
+    </div>
+
+    <!-- ========== Task 0 ========== -->
+    <section class="task" id="task0">
+      <span class="task-label">Task 0</span>
+      <h2>Setup</h2>
+      <p class="desc">jQuery is included from the CDN <code>code.jquery.com</code>. The code runs inside
+        <code>$(document).ready()</code> and prints <code>"jQuery is ready!"</code> to the console.</p>
+      <p id="ready-status" class="status err">jQuery is NOT loaded.</p>
+      <p class="hint">Press F12 → Console to see the message.</p>
+    </section>
+
+    <!-- ========== Task 1 ========== -->
+    <section class="task" id="task1">
+      <span class="task-label">Task 1</span>
+      <h2>Selectors &amp; CSS</h2>
+      <p class="desc">Select elements by <b>ID</b> (<code>$("#id")</code>), <b>class</b> (<code>$(".class")</code>)
+        and <b>tag</b> (<code>$("li")</code>). Change content with <code>.text()</code> / <code>.html()</code>
+        and styles with <code>.css()</code>.</p>
+
+      <div class="demo-box" id="demo1">
+        <h3 id="main-title">I am a heading with id="main-title"</h3>
+        <p class="info">I am a paragraph with class="info".</p>
+        <p class="info">I am another paragraph with class="info".</p>
+        <ul>
+          <li>List item (tag &lt;li&gt;) #1</li>
+          <li>List item (tag &lt;li&gt;) #2</li>
+          <li>List item (tag &lt;li&gt;) #3</li>
+        </ul>
+        <p>.text(): <span id="text-demo">—</span></p>
+        <p>.html(): <span id="html-demo">—</span></p>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn" id="btn-by-id">By ID → .text()</button>
+        <button class="btn" id="btn-by-class">By class → .html()</button>
+        <button class="btn" id="btn-by-tag">By tag → .css()</button>
+        <button class="btn" id="btn-compare">.text() vs .html()</button>
+        <button class="btn" id="btn-random">Random colors (.css)</button>
+        <button class="btn secondary" id="btn-reset1">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Assignment #6 — jQuery &middot; <span class="student-name"></span>, <span class="student-group"></span>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/part1.js"></script>
+</body>
+</html>

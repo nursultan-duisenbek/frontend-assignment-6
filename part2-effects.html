@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 2 — jQuery Effects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">jQuery<span>Lab</span></a>
+      <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="part1-selectors.html">1. Selectors</a>
+        <a href="part2-effects.html" class="active">2. Effects</a>
+        <a href="part3-dom.html">3. DOM</a>
+        <a href="part4-animations.html">4. Animations</a>
+        <a href="part5-project.html">5. Mini Project</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <h1>Part 2. jQuery Effects</h1>
+      <p>Visibility, fade and slide methods.</p>
+    </header>
+
+    <div class="task-nav">
+      <a href="#task2">Task 2. Visibility</a>
+      <a href="#task3">Task 3. Fade</a>
+      <a href="#task4">Task 4. Slide</a>
+    </div>
+
+    <!-- ========== Task 2 ========== -->
+    <section class="task" id="task2">
+      <span class="task-label">Task 2</span>
+      <h2>Visibility Methods</h2>
+      <p class="desc"><code>.hide()</code>, <code>.show()</code> and <code>.toggle()</code>.</p>
+
+      <div class="btn-group">
+        <button class="btn danger" id="btn-hide">Hide</button>
+        <button class="btn success" id="btn-show">Show</button>
+        <button class="btn" id="btn-toggle">Toggle</button>
+      </div>
+
+      <div class="demo-box">
+        <p id="para">
+          jQuery is a fast and small JavaScript library. It makes things like HTML document
+          traversal and manipulation, event handling and animation much simpler.
+        </p>
+      </div>
+      <p class="hint">Paragraph is: <span id="para-state" class="status ok">visible</span></p>
+    </section>
+
+    <!-- ========== Task 3 ========== -->
+    <section class="task" id="task3">
+      <span class="task-label">Task 3</span>
+      <h2>Fade Methods</h2>
+      <p class="desc"><code>.fadeIn()</code>, <code>.fadeOut()</code> and <code>.fadeToggle()</code>.</p>
+
+      <div class="btn-group">
+        <button class="btn success" id="btn-fade-in">Fade In</button>
+        <button class="btn danger" id="btn-fade-out">Fade Out</button>
+        <button class="btn" id="btn-fade-toggle">Fade Toggle</button>
+      </div>
+
+      <div class="fade-wrap">
+        <img id="fade-img" src="images/gallery/mountains.svg" alt="Mountains">
+      </div>
+    </section>
+
+    <!-- ========== Task 4 ========== -->
+    <section class="task" id="task4">
+      <span class="task-label">Task 4</span>
+      <h2>Slide Methods</h2>
+      <p class="desc">A collapsible panel with <code>.slideUp()</code>, <code>.slideDown()</code> and
+        <code>.slideToggle()</code>. You can also click the panel header.</p>
+
+      <div class="btn-group">
+        <button class="btn success" id="btn-slide-down">Slide Down</button>
+        <button class="btn danger" id="btn-slide-up">Slide Up</button>
+        <button class="btn" id="btn-slide-toggle">Slide Toggle</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header" id="panel-header">
+          <span>What is jQuery?</span>
+          <span class="arrow">&#9660;</span>
+        </div>
+        <div class="panel-body" id="panel-body">
+          <p>jQuery was created by John Resig in 2006. Its motto is <b>"Write less, do more"</b>.</p>
+          <p>Main features: DOM selection and manipulation, events, effects and animations, AJAX.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Assignment #6 — jQuery &middot; <span class="student-name"></span>, <span class="student-group"></span>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/part2.js"></script>
+</body>
+</html>
